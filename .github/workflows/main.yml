@@ -15,8 +15,17 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Checkout another repo code
+        uses: actions/checkout@v2
+        with:
+          repository:
+          ssh-key: ${{ secrets.GH_SECRET_KEY }}
+      - name: test
+        run: ls
+
       - name: イメージをビルド
         run: |-
+          exit 1
           DOCKER_BUILDKIT=1 docker image build . -f Dockerfile --tag ${{ secrets.DH_USERNAME }}/portfolio-t-dera:${{ github.run_number }}
 
       - name: イメージの脆弱性診断
