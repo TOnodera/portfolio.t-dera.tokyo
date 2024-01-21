@@ -3,10 +3,6 @@ name: CI
 on:
   push:
     branches: [main]
-permissions:
-  actions: write
-  checks: write
-  contents: write
 jobs:
   buid:
     name: GitOps Workflow
@@ -51,7 +47,6 @@ jobs:
           git config --global user.name "${{ secrets.GH_USERNAME }}"
           git branch ci-robot/request-number-${{ github.run_number }}
           git checkout ci-robot/request-number-${{ github.run_number }}
-          echo "${{ secrets.VALUES_YML }}" > ./values.yaml
           sed -i 's/tag: [0-9]*/tag: ${{ github.run_number }}/g' values.yaml
 
           # git push
@@ -62,4 +57,4 @@ jobs:
           # create  pull request
           echo ${{ secrets.PERSONAL_ACCESS_TOKEN }} > token.txt
           gh auth login --with-token < token.txt
-          gh pr create --title 'Update Tag ${{ github.run_number }}' --body "Please Merge!!"
+          gh pr create --title 'Update Tag ${{ github.run_number }}' --body "マージしてください。マージが完了するとArgoCDがCD処理を開始します。"
