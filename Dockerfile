@@ -37,6 +37,7 @@ RUN chown -R ${userid}:${userid} /home/node/app
 COPY ./frontend /home/node/app
 RUN rm -rf /usr/share/nginx/html \
   && cd /home/node/app \
+  && npm ci \
   && npm run build \
   && mv /home/node/app/dist /usr/share/nginx/html \
   && chown -R nginx:nginx /usr/share/nginx/html
