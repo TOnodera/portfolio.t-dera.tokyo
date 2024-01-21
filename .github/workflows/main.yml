@@ -38,11 +38,13 @@ jobs:
         run: |-
           docker image push ${{ secrets.DH_USERNAME }}/portfolio-t-dera:${{ github.run_number }}
 
-      - name: Checkout another repo code
-        uses: actions/checkout@v2
+      - name: config-for-portfolio.t-dera.tokyoにチェックアウト
+        uses: actions/checkout@v3
         with:
           repository: TOnodera/config-for-portfolio.t-dera.tokyo
           ssh-key: ${{ secrets.GH_SECRET_KEY }}
+
+      - name: バージョンを更新してプルリクエストを作成
         run: |-
           # update values.yaml in new branch
           git config --global user.email "${{ secrets.EMAIL }}"
