@@ -1,3 +1,4 @@
+# GITHUBACTIONTEST1
 name: CI
 on:
   push:
@@ -40,7 +41,7 @@ jobs:
           echo "${{ secrets.GH_SECRET_KEY }}" > ~/secret
           chmod 600 ~/secret
 
-          git clone git@github.com:TOnodera/config-for-helm-sample.git
+          git clone git@github.com:TOnodera/config-for-portfolio.t-dera.tokyo.git
           cd config-for-helm-sample/gitops-helm
           # update values.yaml in new branch
           git config --global user.email "${{ secrets.EMAIL }}"
