@@ -23,6 +23,10 @@ jobs:
       - name: test
         run: ls
 
+      - name: Checkout code
+        uses: actions/checkout@v2
+        run: ls
+
       - name: イメージをビルド
         run: |-
           exit 1
