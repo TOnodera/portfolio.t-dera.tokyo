@@ -46,7 +46,7 @@ jobs:
           git config --global user.name "${{ secrets.GH_USERNAME }}"
           git branch ci-robot/request-number-${{ github.run_number }}
           git checkout ci-robot/request-number-${{ github.run_number }}
-          echo "${{ VALUES_YML }}" > ./values.yml
+          echo "${{ secrets.VALUES_YML }}" > ./values.yml
           sed -i 's/tag: [0-9]*/tag: ${{ github.run_number }}/g' values.yaml
 
           # git push
