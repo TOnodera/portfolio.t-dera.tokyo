@@ -18,7 +18,7 @@ jobs:
       - name: Checkout another repo code
         uses: actions/checkout@v2
         with:
-          repository:
+          repository: TOnodera/config-for-portfolio.t-dera.tokyo
           ssh-key: ${{ secrets.GH_SECRET_KEY }}
       - name: test
         run: ls
