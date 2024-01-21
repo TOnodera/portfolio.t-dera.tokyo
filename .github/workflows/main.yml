@@ -15,23 +15,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Checkout another repo code
-        uses: actions/checkout@v2
-        with:
-          repository: TOnodera/config-for-portfolio.t-dera.tokyo
-          ssh-key: ${{ secrets.GH_SECRET_KEY }}
-      - name: test
-        run: ls
-
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: run ls
-        run: ls
-
       - name: イメージをビルド
         run: |-
-          exit 1
           DOCKER_BUILDKIT=1 docker image build . -f Dockerfile --tag ${{ secrets.DH_USERNAME }}/portfolio-t-dera:${{ github.run_number }}
 
       - name: イメージの脆弱性診断
@@ -53,14 +38,12 @@ jobs:
         run: |-
           docker image push ${{ secrets.DH_USERNAME }}/portfolio-t-dera:${{ github.run_number }}
 
-      - name: values.ymlを更新してconfigリポジトリにプルリクエストを作成する
-        env:
-          GIT_SSH_COMMAND: ssh -i ~/secret -o StrictHostKeyChecking=no -F /dev/null
+      - name: Checkout another repo code
+        uses: actions/checkout@v2
+        with:
+          repository: TOnodera/config-for-portfolio.t-dera.tokyo
+          ssh-key: ${{ secrets.GH_SECRET_KEY }}
         run: |-
-          echo "${{ secrets.GH_SECRET_KEY }}" > ~/secret
-          chmod 600 ~/secret
-
-          git clone git@github.com:TOnodera/config-for-portfolio.t-dera.tokyo.git
           # update values.yaml in new branch
           git config --global user.email "${{ secrets.EMAIL }}"
           git config --global user.name "${{ secrets.GH_USERNAME }}"
