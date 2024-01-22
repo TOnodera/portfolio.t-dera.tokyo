@@ -53,10 +53,10 @@ export default function AboutSite() {
             <Divider />
             <>
               <Grid container alignItems="center" justifyContent="start">
-                <Grid sx={{ paddingTop: 1 }} xs={1}>
+                <Grid sx={{ paddingTop: 1 }} xs={2} sm={2} md={1}>
                   <img src={githubImage} width="50px" />
                 </Grid>
-                <Grid>GitHubでコードを見る。</Grid>
+                <Grid sx={{ marginLeft: 1 }}>GitHubでコードを見る。</Grid>
               </Grid>
             </>
           </CardContent>
