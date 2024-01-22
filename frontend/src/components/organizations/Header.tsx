@@ -1,9 +1,9 @@
 import { Box, Grid, Typography } from '@mui/material';
 
-export default function Header() {
+export default function Header({ className }: { className?: string }) {
   return (
     <>
-      <Grid container sx={{ justifyContent: 'center' }}>
+      <Grid container sx={{ justifyContent: 'center' }} className={className}>
         <Grid xs={12} sx={{ textAlign: 'center' }} item>
           <Box bgcolor="primary.main">
             <Typography
