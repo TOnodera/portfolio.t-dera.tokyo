@@ -8,21 +8,24 @@ import {
   TimelineSeparator,
   timelineOppositeContentClasses,
 } from '@mui/lab';
-import { Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import AssignedProjects from '../molecules/AssignedProjects';
 import AssignedProject from '../molecules/AssignedProject';
 import LeftlinedHeading from '../atoms/LeftlineText';
 
 export default function Timeline() {
   return (
-    <>
+    <Box sx={{ marginTop: 1 }}>
+      <Typography variant="h6">経歴</Typography>
       <MuiTimeline
         sx={{
           [`& .${timelineOppositeContentClasses.root}`]: {
             flex: 0,
           },
           padding: 0,
+          marginTop: 0,
           marginBottom: 0,
+          marginLeft: -2,
         }}
       >
         <TimelineItem>
@@ -124,6 +127,6 @@ export default function Timeline() {
           </TimelineContent>
         </TimelineItem>
       </MuiTimeline>
-    </>
+    </Box>
   );
 }

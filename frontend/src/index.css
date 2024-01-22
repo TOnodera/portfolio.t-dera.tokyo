@@ -2,3 +2,8 @@ html, body{
   margin: 0;
   padding: 0;
 }
+
+/** チャートのツールチップの文字色がtext.secondaryの色に背景色に関係なく適応されるのでここで指定して変更(text.primaryと同じ#222)*/
+.MuiChartsTooltip-labelCell.MuiChartsTooltip-cell {
+  color: #222;
+}

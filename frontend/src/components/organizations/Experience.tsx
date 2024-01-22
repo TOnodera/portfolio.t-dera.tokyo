@@ -4,7 +4,7 @@ import ExperiencePieChart from '../atoms/ExperiencePieChart';
 
 export default function Experience() {
   return (
-    <Box sx={{ marginLeft: 2 }}>
+    <Box sx={{ marginTop: -2, marginBottom: 2 }}>
       <Typography variant="h6" sx={{ marginBottom: 1 }}>
         業務の中で経験してきた技術について
       </Typography>

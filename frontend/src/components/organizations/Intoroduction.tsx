@@ -2,7 +2,7 @@ import { Box, Typography } from '@mui/material';
 
 export default function Introduction() {
   return (
-    <Box sx={{ margin: 2 }}>
+    <Box sx={{ marginBottom: 1 }}>
       <Typography variant="h6" sx={{ marginBottom: 1 }}>
         自己紹介
       </Typography>

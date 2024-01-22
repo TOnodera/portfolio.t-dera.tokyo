@@ -27,6 +27,9 @@ export default function ExperiencePieChart({ data, colors }: Props) {
         [`& .${pieArcLabelClasses.root}`]: {
           fill: '#fff',
         },
+        ['.MuiChartsTooltip-labelCell.MuiChartsTooltip-cell']: {
+          color: '#000',
+        },
       }}
     />
   );
