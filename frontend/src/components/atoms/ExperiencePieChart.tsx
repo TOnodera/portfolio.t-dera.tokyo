@@ -11,6 +11,9 @@ export default function ExperiencePieChart({ data, colors }: Props) {
       colors={colors}
       series={[
         {
+          // ホバーしたときに出るエラーはmui側で対応中とのこと
+          // 新しいバージョンがリリースされ次第適応すれば修正されるはず
+          // https://github.com/mui/mui-x/issues/11679
           data,
           arcLabel: (params) => `${params.value}%` ?? '',
           innerRadius: 20,
@@ -23,7 +26,6 @@ export default function ExperiencePieChart({ data, colors }: Props) {
       sx={{
         [`& .${pieArcLabelClasses.root}`]: {
           fill: '#fff',
-          fontSize: 14,
         },
       }}
     />

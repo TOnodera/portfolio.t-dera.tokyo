@@ -1,16 +1,10 @@
 import { Box, Grid, Typography } from '@mui/material';
-import style from '../../style.module.scss';
 
 export default function Header() {
   return (
     <>
-      <Grid
-        container
-        xs={12}
-        sx={{ justifyContent: 'center' }}
-        className={style.header}
-      >
-        <Grid xs={12} sx={{ textAlign: 'center' }}>
+      <Grid container sx={{ justifyContent: 'center' }}>
+        <Grid xs={12} sx={{ textAlign: 'center' }} item>
           <Box bgcolor="primary.main">
             <Typography
               variant="h4"

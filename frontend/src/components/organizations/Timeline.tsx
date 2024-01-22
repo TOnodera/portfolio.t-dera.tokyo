@@ -49,7 +49,7 @@ export default function Timeline() {
               主に利用した技術
             </LeftlinedHeading>
             <Typography variant="body1">
-              PHP/MySql/Apache/JQuery/javascript
+              PHP / MySql / Apache / JQuery / javascript
             </Typography>
             <AssignedProjects>
               <AssignedProject title="ボランティア人材管理システム">
@@ -92,7 +92,8 @@ export default function Timeline() {
               主に利用した技術
             </LeftlinedHeading>
             <Typography variant="body1">
-              PHP/Laravel/Python/Typescript/React/AWS/Git/MySql/PostgreSql
+              PHP / Laravel / Python / Typescript / React / AWS / Git / MySql /
+              PostgreSql
             </Typography>
 
             <AssignedProjects>

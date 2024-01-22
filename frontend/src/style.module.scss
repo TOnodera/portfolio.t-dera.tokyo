@@ -2,18 +2,18 @@
   min-height: 100vh;
   display: grid;
   grid-template-rows: 80px 1fr 10px;
+  grid-template-columns: 1fr;
   grid-template-areas: 
     "header"
     "main"
     "footer";
+  box-sizing: border-box;
   .header {
     grid-area: header;
   }
   .main {
     grid-area: main;
-    /** MUICardのカスタムCSS */
-    .MuiCard-root {
-    }
+    max-width: 100%; 
   }
   .footer {
     grid-area: footer;

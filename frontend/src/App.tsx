@@ -8,7 +8,9 @@ import ExperiencePieChart from './components/atoms/ExperiencePieChart';
 function App() {
   return (
     <div className={style.layout}>
-      <Header />
+      <header className={style.header}>
+        <Header />
+      </header>
       <main className={style.main}>
         <Box sx={{ margin: 2 }}>
           <Typography variant="h6" sx={{ marginBottom: 1 }}>
@@ -54,9 +56,9 @@ function App() {
               alignItems="center"
               sx={{ marginTop: 3 }}
             >
-              <Grid xs={12} md={4}>
+              <Grid xs={12} md={4} item>
                 <Typography
-                  width={300}
+                  maxWidth={1}
                   sx={{ margin: '0 auto', textAlign: 'center' }}
                   variant="subtitle2"
                 >
@@ -75,9 +77,9 @@ function App() {
                   />
                 </Box>
               </Grid>
-              <Grid xs={12} md={4}>
+              <Grid xs={12} md={4} item>
                 <Typography
-                  width={300}
+                  maxWidth={1}
                   sx={{ margin: '0 auto', textAlign: 'center' }}
                   variant="subtitle2"
                 >

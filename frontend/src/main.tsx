@@ -13,11 +13,12 @@ const theme = createTheme({
     secondary: { main: '#00000061', light: '#dfdfdf', dark: '#00000099' },
     text: {
       primary: '#222',
-      secondary: '#eee',
+      secondary: '#777',
     },
   },
   typography: {
     fontFamily: ['DotGothic16', 'sans-serif'].join(','),
+    fontSize: 12,
   },
 });
 
