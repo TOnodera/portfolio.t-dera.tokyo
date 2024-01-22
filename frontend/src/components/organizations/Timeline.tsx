@@ -22,6 +22,7 @@ export default function Timeline() {
             flex: 0,
           },
           padding: 0,
+          marginBottom: 0,
         }}
       >
         <TimelineItem>
