@@ -1,6 +1,15 @@
-import { Box, Typography } from '@mui/material';
+import {
+  Box,
+  Card,
+  CardContent,
+  Divider,
+  Grid,
+  Typography,
+} from '@mui/material';
 import LeftlinedHeading from '../atoms/LeftlineText';
 import design from '../../assets/design.png';
+import ImageDialog from '../atoms/ImageDialog';
+import githubImage from '../../assets/icons8-github-144.png';
 
 export default function AboutSite() {
   return (
@@ -24,11 +33,35 @@ export default function AboutSite() {
 
       <LeftlinedHeading sx={{ marginBottom: 1 }}>構成図</LeftlinedHeading>
       <Typography variant="body1">
-        システムの構成図は以下のようになっていてます。ちゃんと書けてるか怪しいですが大枠はあっているはずです。
+        システムの構成図は大枠は以下のようになっていてます。
       </Typography>
       <Box>
-        <img src={design} style={{ maxWidth: '100%', padding: '2rem' }} />
+        <ImageDialog image={design} />
       </Box>
+      <Divider />
+      <LeftlinedHeading>Git Hubリポジトリ</LeftlinedHeading>
+      <div
+        onClick={() => {
+          window.open('https://github.com/TOnodera/portfolio.t-dera.tokyo');
+        }}
+      >
+        <Card sx={{ cursor: 'pointer' }}>
+          <CardContent>
+            <Typography variant="subtitle1" fontWeight="bold">
+              TOnodera/portrolio.t-dera.tokyo
+            </Typography>
+            <Divider />
+            <>
+              <Grid container alignItems="center" justifyContent="start">
+                <Grid sx={{ paddingTop: 1 }} xs={1}>
+                  <img src={githubImage} width="50px" />
+                </Grid>
+                <Grid>GitHubでコードを見る。</Grid>
+              </Grid>
+            </>
+          </CardContent>
+        </Card>
+      </div>
     </Box>
   );
 }
