@@ -6,6 +6,7 @@ import Introduction from './components/organizations/Intoroduction';
 import Experience from './components/organizations/Experience';
 import Footer from './components/organizations/Footer';
 import AboutSite from './components/organizations/AboutSite';
+import Other from './components/organizations/Other';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Timeline />
             <Experience />
             <AboutSite />
+            <Other />
           </Grid>
         </Grid>
       </Box>
