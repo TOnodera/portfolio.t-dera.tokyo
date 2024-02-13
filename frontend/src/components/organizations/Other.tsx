@@ -33,11 +33,11 @@ export default function Other() {
       <Typography variant="body1">
         技術キャッチアップ用のサイトを作成しました。企業が公開しているテックブログをクローリングしてまとめたものです。自分が見るために作っていて、今後はこのシステムに試してみたい新技術を投入してみたいと思っています。
       </Typography>
-      <Box>
+      <Box sx={{ textAlign: 'center' }}>
         <ImageDialog image={mockUpImage}></ImageDialog>
       </Box>
       <LeftlinedHeading sx={{ marginBottom: 1 }}>システム構成</LeftlinedHeading>
-      <Box>
+      <Box sx={{ textAlign: 'center' }}>
         <ImageDialog image={systemDesignImage}></ImageDialog>
       </Box>
       <Card>
