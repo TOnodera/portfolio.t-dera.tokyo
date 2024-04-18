@@ -66,30 +66,6 @@ export default function Other() {
           <Grid xs={12} sm={6}>
             <div
               onClick={() => {
-                window.open('https://github.com/TOnodera/ittopic-crawler');
-              }}
-            >
-              <Card sx={{ cursor: 'pointer', margin: 1 }}>
-                <CardContent>
-                  <Typography variant="subtitle1" fontWeight="bold">
-                    TOnodera/ittopic-crawler(クローラ)
-                  </Typography>
-                  <Divider />
-                  <>
-                    <Grid container alignItems="center" justifyContent="start">
-                      <Grid sx={{ paddingTop: 1 }} xs={2} sm={2} md={1}>
-                        <img src={githubImage} width="50px" />
-                      </Grid>
-                      <Grid sx={{ marginLeft: 1 }}>GitHubでコードを見る。</Grid>
-                    </Grid>
-                  </>
-                </CardContent>
-              </Card>
-            </div>
-          </Grid>
-          <Grid xs={12} sm={6}>
-            <div
-              onClick={() => {
                 window.open('https://github.com/TOnodera/ittopic-fontend');
               }}
             >
